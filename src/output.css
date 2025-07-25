@@ -64,9 +64,12 @@
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-900: oklch(21% 0.006 285.885);
+    --color-neutral-600: oklch(43.9% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --container-6xl: 72rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -275,6 +278,39 @@
     width: calc(var(--spacing) * 8);
     height: calc(var(--spacing) * 8);
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
+  }
+  .w-200 {
+    width: calc(var(--spacing) * 200);
+  }
+  .w-300 {
+    width: calc(var(--spacing) * 300);
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-sm {
+    width: var(--container-sm);
+  }
+  .max-w-200 {
+    max-width: calc(var(--spacing) * 200);
+  }
+  .min-w-200 {
+    min-width: calc(var(--spacing) * 200);
+  }
+  .min-w-300 {
+    min-width: calc(var(--spacing) * 300);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -361,6 +397,9 @@
   .bg-lime-700 {
     background-color: var(--color-lime-700);
   }
+  .bg-neutral-600 {
+    background-color: var(--color-neutral-600);
+  }
   .bg-purple-50 {
     background-color: var(--color-purple-50);
   }
@@ -444,6 +483,10 @@
   }
   .text-right {
     text-align: right;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -623,6 +666,13 @@
   .outline-amber-500 {
     outline-color: var(--color-amber-500);
   }
+  .hover\:w-6xl {
+    &:hover {
+      @media (hover: hover) {
+        width: var(--container-6xl);
+      }
+    }
+  }
   .hover\:bg-zinc-900 {
     &:hover {
       @media (hover: hover) {
@@ -635,6 +685,11 @@
       @media (hover: hover) {
         color: var(--color-blue-600);
       }
+    }
+  }
+  .md\:w-sm {
+    @media (width >= 48rem) {
+      width: var(--container-sm);
     }
   }
   .\[\&\>\*\]\:flex {
