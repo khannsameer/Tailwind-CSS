@@ -7,12 +7,23 @@
     <title>Size class</title>
   </head>
   <body class="h-screen">
+    <!-- 
+  Tailwind CSS Size Utilities Demo
+  This file shows how to use fixed, fraction-based, and interactive sizing
+  using Tailwind’s width (`w-`), height (`h-`), and `size-*` shorthand.
+-->
+
+    <!-- Fixed width and height using w-50 and h-50 (requires custom config unless defined) -->
     <div class="bg-pink-500 w-50 h-50">Hello World...!!</div>
-    <br /><br />
+
+    <!-- Shorthand utility: size-50 (sets both width and height to 50) -->
+    <!-- Requires custom value "50" to be defined in tailwind.config.js -->
     <div class="bg-pink-500 size-50">Hello World...!!</div>
-    <br /><br />
+
+    <!-- Responsive fractional size (1/3 of parent width and height) -->
     <div class="bg-pink-300 size-1/3">Hello World...!!</div>
-    <br /><br />
+
+    <!-- Hover effect: size changes from 10rem (size-40) to 50% (size-1/2) on hover -->
     <div class="bg-pink-200 size-40 hover:size-1/2">Hello World...!!</div>
   </body>
 </html>
