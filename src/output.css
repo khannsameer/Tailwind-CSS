@@ -76,7 +76,10 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-3xs: 16rem;
     --container-sm: 24rem;
+    --container-3xl: 48rem;
+    --container-4xl: 56rem;
     --container-6xl: 72rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
@@ -439,6 +442,24 @@
   .resize {
     resize: both;
   }
+  .columns-1 {
+    columns: 1;
+  }
+  .columns-2 {
+    columns: 2;
+  }
+  .columns-3xl {
+    columns: var(--container-3xl);
+  }
+  .columns-3xs {
+    columns: var(--container-3xs);
+  }
+  .columns-4xl {
+    columns: var(--container-4xl);
+  }
+  .columns-auto {
+    columns: auto;
+  }
   .justify-end {
     justify-content: flex-end;
   }
@@ -523,6 +544,9 @@
   .bg-cyan-900 {
     background-color: var(--color-cyan-900);
   }
+  .bg-emerald-700 {
+    background-color: var(--color-emerald-700);
+  }
   .bg-emerald-800 {
     background-color: var(--color-emerald-800);
   }
@@ -576,6 +600,9 @@
   }
   .bg-pink-500 {
     background-color: var(--color-pink-500);
+  }
+  .bg-pink-800 {
+    background-color: var(--color-pink-800);
   }
   .bg-purple-50 {
     background-color: var(--color-purple-50);
@@ -916,6 +943,11 @@
       background-color: var(--color-emerald-700);
     }
   }
+  .sm\:columns-2 {
+    @media (width >= 40rem) {
+      columns: 2;
+    }
+  }
   .sm\:bg-green-900 {
     @media (width >= 40rem) {
       background-color: var(--color-green-900);
@@ -938,6 +970,11 @@
       font-stretch: 90%;
     }
   }
+  .md\:columns-3 {
+    @media (width >= 48rem) {
+      columns: 3;
+    }
+  }
   .md\:bg-amber-300 {
     @media (width >= 48rem) {
       background-color: var(--color-amber-300);
@@ -953,6 +990,11 @@
     @media (width >= 48rem) {
       --tw-font-weight: var(--font-weight-extrabold);
       font-weight: var(--font-weight-extrabold);
+    }
+  }
+  .lg\:columns-4 {
+    @media (width >= 64rem) {
+      columns: 4;
     }
   }
   .lg\:bg-emerald-900 {
