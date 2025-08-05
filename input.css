@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,7 +7,7 @@
   --breakpoint-lg: 1000;
   --breakpoint-big: 1300;
 
-  --font-custom: "Audiowide", "sans-serif";
+  --font-custom: "Open Sans", sans-serif;
 }
 
 @layer components {
